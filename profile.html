@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <fieldset>
+        <legend>CSV File Handling</legend>
+        <form>
+            <fieldset>
+                <legend>Input data in csv file</legend>
+               Name: <input type="text" name="name" value="" id="name"> 
+               Age : <input type="text" name="age" value="" id="age" > 
+               eMail: <input type="email" name="email" value="" id="email" >
+            <input type="button" value="send" id="send">
+            </fieldset>
+        </form>  
+        <br><br>
+        <fieldset>
+            <legend>Action</legend>
+             <form  action="profile.php" method="POST">
+                <input type="hidden" name="down" value="profile.csv">
+                <input type="submit" value="Download csv" id="download"> 
+                <input type="button" value="delete file" id="delete">
+            </form>
+            </fieldset><br>
+        <table border="1" align="center" width="100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                
+            </tbody>
+        </table>
+    </fieldset>  
+    <script src="profile.js"></script>
+</body>
+</html>
